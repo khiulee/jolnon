@@ -1,3 +1,6 @@
+# installed.packages("lavaan")
+install.packages("semTools")
+
 library(lavaan)
 # 데이터 불러오기
 data <- read.csv("survey_data_standardized.csv")
@@ -16,7 +19,7 @@ model <- '
     # Define paths
     work_time ~ a_1*commute_time
     sleep_time ~ r*work_time + a_2*commute_time
-    income ~ b_1*sleep_time + b_2*time_with_family +c*commute_time + ADQ3A_2 + ADQ3A_3 + ADQ3A_4 + ADQ3A_5 + ADQ3A_6 + ADQ3A_7
+    income ~ b_1*sleep_time + b_2*time_with_family +c*commute_time + ADQ3A_2.0 + ADQ3A_3.0 + ADQ3A_4.0 + ADQ3A_5.0 + ADQ3A_6.0 + ADQ3A_7.0
   
 '
 
